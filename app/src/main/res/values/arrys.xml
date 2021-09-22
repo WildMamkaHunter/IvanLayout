@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="categor1">
+    <item>Галя</item>
+    <item>Даня</item>
+    <item>Миша</item>
+    <item>Саня</item>
+    </string-array>
+
+</resources>
