@@ -10,9 +10,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-public class ListAdapter extends ArrayAdapter<User>{
-    public ListAdapter(@NonNull Context context, int resource, int textViewResourceId) {
-        super(context, resource, textViewResourceId);
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListAdapter extends ArrayAdapter<User>
+{
+    public ListAdapter(@NonNull Context context, ArrayList<User> userArrayAdapter) {
+        super(context, R.layout.item_list,(List<User>) userArrayAdapter);
     }
 
     @NonNull

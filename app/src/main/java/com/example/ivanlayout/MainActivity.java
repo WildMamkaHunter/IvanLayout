@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         int[] imageId = {R.drawable.a, R.drawable.d, R.drawable.c, R.drawable.d,
                 R.drawable.e, R.drawable.f, R.drawable.g, R.drawable.f, R.drawable.i,};
         String[] name = {"Ольга", "Денис", "Стас", "Иван", "Настя", "Лера", "Яна", "Никита", "Максим"};
-        String[] lastMessage = {"Привет", "Пока", "Стас", "Лох", "Ок", "Ваня", "Топ", "Напишешь", "Нет"};
+        String[] lastMessage = {"Привет", "Пока", "Я гуль", "Стас молчи", "Ок", "Ваня", "Топ", "Напишешь", "Нет"};
         String[] lastMsgTime = {"7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"};
         String[] phoneNo = {"8(8875)590-44-58", "8(9086)873-02-27", "8(9086)873-02-27", "8(9086)873-02-27",
                 "8(2065)988-98-98", "8(769)953-13-97", "8(318)361-33-74", "8(53)321-79-76", "8(62)755-51-86"};
@@ -48,7 +48,10 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("phone",phoneNo[i]);
                 intent.putExtra("country",country[i]);
                 intent.putExtra("imageid",imageId[i]);
+
+                startActivity(intent);
             }
+        
         });
     }
 }
