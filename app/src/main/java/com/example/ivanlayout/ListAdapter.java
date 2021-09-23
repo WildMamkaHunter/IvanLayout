@@ -15,16 +15,24 @@ public class ListAdapter extends ArrayAdapter<User>{
         super(context, resource, textViewResourceId);
     }
 
-    public View getView (int position, View convertView, ViewGroup parent)
-    {
+    @NonNull
+    @Override
+    public View getView (int position, View convertView, ViewGroup parent) {
         User user = getItem(position);
-        if(convertView==null){
-//            convertView = LayoutInflater.from(getContext().getApplicationInfo()
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_list, parent, false);
         }
-
         ImageView imageView = convertView.findViewById(R.id.imageView);
         TextView userName = convertView.findViewById(R.id.personName);
+        TextView lastMsg = convertView.findViewById(R.id.lastMessage);
+        TextView time = convertView.findViewById(R.id.msgtime);
 
-        return null;
+        imageView.setImageResource(user.imageId);
+        userName.setText(user.name);
+        lastMsg.setText(user.lastMessage);
+        time.setText(user.lastMsgTime);
+        return convertView;
+
+
     }
 }
